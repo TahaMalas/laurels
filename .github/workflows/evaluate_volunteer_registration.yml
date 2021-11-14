@@ -1,0 +1,27 @@
+# This workflow will triage pull requests and automatically evaluate the volunteer registration process
+
+name: "Evaluate Volunteer Registration"
+on:
+  # Run the workflow only if the pull request was on `main` branch
+  pull_request:
+    branches:
+      - main
+    # Run the workflow only if the pull request edited the `volunteersMap.json` file
+    paths:
+      - 'data/volunteersMap.json'
+
+jobs:
+  first_job:
+    name: "Test echo"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Print a greeting
+        run: |
+          echo hello.
+          cat volunteersMap.json
+        working-directory: /data
+
