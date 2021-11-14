@@ -23,5 +23,5 @@ jobs:
         run: |
           echo hello.
           cat volunteersMap.json
-        working-directory: /data
+        working-directory: data
 
