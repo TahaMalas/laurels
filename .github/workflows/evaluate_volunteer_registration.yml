@@ -22,6 +22,5 @@ jobs:
       - name: Print a greeting
         run: |
           echo hello.
-          cat volunteersMap.json
-        working-directory: data
+          cat data/volunteersMap.json
 
